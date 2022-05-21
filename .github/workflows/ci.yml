@@ -30,14 +30,13 @@ jobs:
         with:
           context: .
           push: true
-          tags: xkingrd/app:latest
-          secrets: |
-            "github_token=${{ secrets.DOCKERHUB_TOKEN }}"
+          tags: xkingrd/littlelink:latest
+
       -
         name: Update repo description
         uses: peter-evans/dockerhub-description@v2
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_PASSWORD }}
+          password: ${{ secrets.DOCKERHUB_TOKEND }}
           repository: xkingrd/${{ github.repository }}
           short-description: ${{ github.event.repository.description }}
