@@ -4,8 +4,7 @@ on:
   push:
     branches:
       - 'main'
-    paths:
-      - README.md
+
 
 jobs:
   docker:
@@ -37,11 +36,10 @@ jobs:
           push: true
           tags: xkingrd/littlelink:v${{ env.ATTEMPT }}
 
-      -
-        name: Update repo description
-        uses: peter-evans/dockerhub-description@v3
+      - name: Sync
+        uses: ms-jpq/sync-dockerhub-readme@v1
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
           repository: xkingrd/littlelink:v${{ env.ATTEMPT }}
-          short-description: ${{ github.event.repository.description }}
+          readme: "./HubReadme.md"
