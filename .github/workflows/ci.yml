@@ -38,5 +38,5 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-          repository: xkingrd/${{ github.repository }}
+          repository: xkingrd/littlelink:latest
           short-description: ${{ github.event.repository.description }}
