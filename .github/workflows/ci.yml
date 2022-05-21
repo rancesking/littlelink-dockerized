@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - 'main'
+    paths:
+      - README.md
 
 jobs:
   docker:
@@ -42,4 +44,4 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
           repository: xkingrd/littlelink:v${{ env.ATTEMPT }}
-          short-description: "Hello this is a test You can try it"
+          short-description: ${{ github.event.repository.description }}
