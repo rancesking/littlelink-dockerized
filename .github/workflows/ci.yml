@@ -42,4 +42,4 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
           repository: xkingrd/littlelink:${{ env.ATTEMPT }}
-          readme-filepath: ./HubReadme.md
+          short-description: "Hello this is a test You can try it"
