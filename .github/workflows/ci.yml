@@ -30,7 +30,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: xkingrd/littlelink:latest
+          tags: xkingrd/littlelink:${{ GITHUB_RUN_NUMBER }}
 
       -
         name: Update repo description
@@ -39,4 +39,4 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
           repository: xkingrd/littlelink:latest
-          short-description: ${{ github.event.repository.description }}
+          readme-filepath: ./HubReadme.md
