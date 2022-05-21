@@ -2,8 +2,7 @@
 <p align="center">
 <img src="https://i.ibb.co/THcSLWK/avatar.png">
 </p>
-LittleLink is a lightweight DIY alternative to services like [Linktree](https://linktr.ee)
-and [many.link](https://many.link/). LittleLink was built using [Skeleton](http://getskeleton.com/), a dead simple,  responsive boilerplate—we just stripped out some additional code you wouldn't need and added in branded styles for popular services. 😊
+LittleLink is a lightweight DIY alternative to services like [Linktree](https://linktr.ee) and [many.link](https://many.link/). LittleLink was built using [Skeleton](http://getskeleton.com/), a dead simple,  responsive boilerplate—we just stripped out some additional code you wouldn't need and added in branded styles for popular services. 🦦🦦
 
 ## Challenge week 4
 
