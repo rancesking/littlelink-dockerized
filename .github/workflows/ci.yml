@@ -28,9 +28,11 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v3
         with:
-          context: "{{defaultContext}}"
+          context: .
           push: true
           tags: user/app:latest
+          secrets: |
+            "github_token=${{ secrets.DOCKERHUB_TOKEN }}"
       -
         name: Update repo description
         uses: peter-evans/dockerhub-description@v2
