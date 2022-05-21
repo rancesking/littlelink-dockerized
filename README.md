@@ -6,7 +6,9 @@ LittleLink is a lightweight DIY alternative to services like [Linktree](https://
 
 ## Challenge week 4
 
-This project uses the Dockerfile to deploy a nginx Frontend, that host my custom LittleLink page with all my contact info. This project have a CI Action that is triged when some code is pushed to main, build the DockerFile and pushing it to Docker Hub.
+This project uses the Dockerfile to deploy a nginx Frontend, that host my custom LittleLink page with all my contact info. This project have a CI Action that is triged when some code is pushed to main, build the DockerFile and pushing it to Docker Hub to my repository [xkingrd](https://hub.docker.com/repository/docker/xkingrd/littlelink).
+
+
 
 To use this project first you need modify the code push the changes to main then get the image from Docker hub 
 
@@ -15,7 +17,7 @@ To use this project first you need modify the code push the changes to main then
 docker run -d --name <Your desired container name> xkingrd/littlelink:v<desired version of the image>
 
 Example:
-docker run -d --name webserver xkingrd/littlelink:v24
+docker run -d --name webserver xkingrd/littlelink:v30
 ```
 2) Show the container status
 ```js
